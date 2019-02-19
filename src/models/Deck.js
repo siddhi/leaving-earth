@@ -41,7 +41,7 @@ function createOutcomeDeck () {
   addCards(Outcome.SUCCESS, 60)
   addCards(Outcome.MINOR, 15)
   addCards(Outcome.MAJOR, 15)
-  return deck
+  return deck.shuffle()
 }
 
 const OutcomeDeck = createOutcomeDeck()
