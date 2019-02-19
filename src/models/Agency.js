@@ -1,12 +1,22 @@
-import {Component} from '@/models/Component'
+import { Component } from '@/models/Component'
 
-export default class Agency {
-  constructor(name) {
-    this.name = name;
-    this.techs = [];
+class Agency {
+  constructor (name) {
+    this.name = name
+    this.techs = []
   }
 
-  addTech(name, deck) {
-    this.techs.push(new Component(name, deck));
+  addTech (name, deck) {
+    this.techs.push(new Component(name, deck))
   }
 }
+
+const AvailableAgencies = {
+  USA: new Agency('USA'),
+  FRANCE: new Agency('FRANCE'),
+  USSR: new Agency('USSR'),
+  CHINA: new Agency('CHINA'),
+  JAPAN: new Agency('JAPAN')
+}
+
+export { AvailableAgencies, Agency }

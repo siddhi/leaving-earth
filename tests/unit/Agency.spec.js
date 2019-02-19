@@ -1,4 +1,4 @@
-import Agency from '@/models/Agency'
+import { Agency } from '@/models/Agency'
 import Outcome from '@/models/Outcome'
 import {Deck} from '@/models/Deck'
 import {Component, AvailableComponents} from '@/models/Component'
