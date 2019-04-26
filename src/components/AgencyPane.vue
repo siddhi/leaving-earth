@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="subtitle">{{ agency.name }}</h2>
+    <AgencyBanner :name="agency.name" size="medium" />
     <div v-if="Object.keys(availableTechnologies).length > 0">
       <b-field>
         <b-select placeholder="Buy a technology" v-model="selectedTech">
@@ -29,6 +29,7 @@ import { Agency } from '@/models/Agency'
 import { AvailableComponents, Component } from '@/models/Component'
 import { OutcomeDeck } from '@/models/Deck'
 import TechnologyComponent from './TechnologyComponent.vue'
+import AgencyBanner from './AgencyBanner.vue'
 
 export default {
   name: 'AgencyPane',
@@ -36,7 +37,8 @@ export default {
     agency: Agency
   },
   components: {
-    TechnologyComponent
+    TechnologyComponent,
+    AgencyBanner
   },
   data: function () {
     return {
